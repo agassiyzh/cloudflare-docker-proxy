@@ -7,17 +7,17 @@ const dockerHub = "https://registry-1.docker.io";
 
 const routes = {
   // production
-  "docker.yuzhuohui.info": dockerHub,
-  "quay.yuzhuohui.info": "https://quay.io",
-  "gcr.yuzhuohui.info": "https://gcr.io",
-  "k8s-gcr.yuzhuohui.info": "https://k8s.gcr.io",
-  "k8s.yuzhuohui.info": "https://registry.k8s.io",
-  "ghcr.yuzhuohui.info": "https://ghcr.io",
-  "cloudsmith.yuzhuohui.info": "https://docker.cloudsmith.io",
-  "ecr.yuzhuohui.info": "https://public.ecr.aws",
+  // "docker.yuzhuohui.info": dockerHub,
+  // "quay.yuzhuohui.info": "https://quay.io",
+  // "gcr.yuzhuohui.info": "https://gcr.io",
+  // "k8s-gcr.yuzhuohui.info": "https://k8s.gcr.io",
+  // "k8s.yuzhuohui.info": "https://registry.k8s.io",
+  // "ghcr.yuzhuohui.info": "https://ghcr.io",
+  // "cloudsmith.yuzhuohui.info": "https://docker.cloudsmith.io",
+  // "ecr.yuzhuohui.info": "https://public.ecr.aws",
 
   // staging
-  "docker-staging.yuzhuohui.info": dockerHub,
+  // "docker-staging.yuzhuohui.info": dockerHub,
   "tccr.yuzhuohui.info": "https://tccr.io",
 };
 
