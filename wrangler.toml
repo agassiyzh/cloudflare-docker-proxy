@@ -21,6 +21,15 @@ name = "cloudflare-docker-proxy"
 #   { pattern = "ghcr.libcuda.so", custom_domain = true },
 #   { pattern = "cloudsmith.libcuda.so", custom_domain = true },
 # ]
+const routes = {
+  "docker.yuzhuohui.info": "https://registry-1.docker.io",
+  "quay.yuzhuohui.info": "https://quay.io",
+  "gcr.yuzhuohui.info": "https://k8s.gcr.io",
+  "k8s-gcr.yuzhuohui.info": "https://k8s.gcr.io",
+  "ghcr.yuzhuohui.info": "https://ghcr.io",
+  "tccr.yuzhuohui.info": "https://tccr.io",
+};
+
 
 [env.production.vars]
 MODE = "production"
