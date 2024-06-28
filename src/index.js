@@ -18,7 +18,7 @@ const routes = {
 
   // staging
   // "docker-staging.yuzhuohui.info": dockerHub,
-  "tccr.yuzhuohui.info": "https://quay.io",
+  "true-cr.yuzhuohui.info": "https://quay.io",
 };
 
 function routeByHosts(host) {
