@@ -107,7 +107,17 @@ async function handleRequest(request) {
   // foward requests
   const newUrl = new URL(upstream + url.pathname);
   const newHeaders = new Headers(request.headers);
-  newHeaders.delete("Host");
+  newHeaders.set("Host", newUrl.hostname);
+  const headersToDelete = [
+    "Cf-Connecting-Ip",
+    "Cf-Ipcountry",
+    "Cf-Ray",
+    "Cf-Visitor",
+    "X-Forwarded-Proto",
+    "X-Forwarded-For",
+  ];
+  headersToDelete.forEach((header) => newHeaders.delete(header));
+
   const newReq = new Request(newUrl, {
     method: request.method,
     headers: newHeaders,
