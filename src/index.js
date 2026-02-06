@@ -106,9 +106,11 @@ async function handleRequest(request) {
   }
   // foward requests
   const newUrl = new URL(upstream + url.pathname);
+  const newHeaders = new Headers(request.headers);
+  newHeaders.delete("Host");
   const newReq = new Request(newUrl, {
     method: request.method,
-    headers: request.headers,
+    headers: newHeaders,
     // don't follow redirect to dockerhub blob upstream
     redirect: isDockerHub ? "manual" : "follow",
   });
